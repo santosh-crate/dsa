@@ -1,0 +1,17 @@
+s=['eat','ate','nat','tan','bat','tea']
+g=[]
+y=[]
+for i in range(len(s)):
+    t=list(s[i])
+    t.sort()
+    for j in range(len(s)):
+        f=list(s[j])
+        f.sort()
+        if t==f:
+            if s[j]!='':
+                g.append(s[j])
+            s[j]=''
+    if g!=[]:
+        y.append(g)
+    g=[]
+print(y)

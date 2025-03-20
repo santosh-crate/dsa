@@ -1,0 +1,10 @@
+s=[1,1,2,2]
+t=[]
+g=set(s)
+for i in g:
+    c=0
+    for j in range(len(s)):
+        if i==s[j]:
+            c+=1
+    t.append([i,c])
+print(t)

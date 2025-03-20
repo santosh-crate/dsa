@@ -1,0 +1,17 @@
+listinput=int(input("enter a number "))
+twosum=[]
+
+for i in range(listinput):
+    inp=int(input('enter a number to insert into the list'))
+    twosum.append(inp)
+target=9
+value=0
+
+for i in range(len(twosum)):
+    for j in range(len(twosum)):
+        if twosum[i]+twosum[j]==target:
+            value+=1
+            print(twosum[i],twosum[j])
+            break
+if not(value):
+    print("target value doesn't match ")

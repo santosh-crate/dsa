@@ -1,0 +1,12 @@
+s = [1, 1, 2, 1, 3, 5, 1]
+h=len(s)//2
+t=[]
+g=set(s)
+for i in g:
+    c=0
+    for j in range(len(s)):
+        if i==s[j]:
+            c+=1
+    if c>h:
+        t.append(i)
+print(t)

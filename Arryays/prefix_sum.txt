@@ -1,0 +1,6 @@
+arr = [2, 4, 6, 8, 10]
+prefix=arr[0]
+prefix_arr=[prefix]
+for i in range(1,len(arr)):
+prefix_arr.append(arr[i]+prefix_arr[i-1])
+print(prefix_arr) 

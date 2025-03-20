@@ -1,0 +1,9 @@
+s=153
+n=s
+u=''
+while s>0:
+    r=s//10
+    g=s%10
+    u+=str(g**3)
+    s=r
+print(u)

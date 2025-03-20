@@ -1,0 +1,10 @@
+s=[16,17,5,1,2]
+c=[]
+for i in range(len(s)):
+    for j in range(i+1,len(s)):
+        if s[j]>s[i]:
+            break
+        elif s[i]>s[j] or s[j]==s[i]:
+            c.append(s[i])
+            break
+print(c+[s[-1]])

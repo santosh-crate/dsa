@@ -1,0 +1,8 @@
+s=[1,2,3,4,5]
+t=[]
+top=-1
+
+for i in range(len(s)):
+    t.append(s[top])
+    s.pop()
+print(t)
