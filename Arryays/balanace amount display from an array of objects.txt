@@ -1,0 +1,55 @@
+t = [
+  { 'user': "Alice", 'amount': 500, 'type': "deposit" },
+  { 'user': "Bob", 'amount': 200, 'type': "deposit" },
+  { 'user': "Alice", 'amount': 100, 'type': "withdrawal" },
+  {'user': "Alice", 'amount': 300, 'type': "deposit" },
+  { 'user': "Bob", 'amount': 50, 'type': "withdrawal" }
+]
+g = []
+l=[]
+for i in range(len(t)):
+    s = 0 
+    h = 0  
+    if t[i]['user'] not in l: 
+        for j in range(len(t)):
+            if (t[j]['user'] == t[i]['user'] and t[j]['type'] == "deposit"):
+                h += t[j]['amount']
+            if (t[j]['user'] == t[i]['user'] and t[j]['type'] == "withdrawal"):
+                s += t[j]['amount']
+    
+        g.append({t[i]['user']: h - s})
+        l.append(t[i]['user'])
+print(g)
+
+
+
+
+const t= [
+  { user: "Alice", amount: 500, type: "deposit" },
+  { user: "Bob", amount: 200, type: "deposit" },
+  { user: "Alice", amount: 100, type: "withdrawal" },
+  { user: "Alice", amount: 300, type: "deposit" },
+  { user: "Bob", amount: 50, type: "withdrawal" }
+];
+g=[]
+l=[]
+for(let i=0;i<t.length;i++){
+    let s=0
+    let h=0
+    if (!l.includes(t[i].user)){
+         for (let j=0;j<t.length;j++){
+         if (t[j].user === t[i].user && t[j].type === "deposit"){
+            h+=t[j].amount
+        }
+        if (t[j].user === t[i].user && t[j].type === "withdrawal" ){
+            s+=t[j].amount
+        }
+    }
+    g.push({[t[i].user]:h-s})
+    l.push(t[i].user)
+    }
+   
+}
+console.log(g)
+
+
